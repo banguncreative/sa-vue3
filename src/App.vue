@@ -9,26 +9,21 @@
   import sectionAbout from './components/section-about.vue';
   import sectionfact from "./components/section-fact.vue";
   import sectionServices from './components/section-services.vue';
+  import sectionCalltoaction from './components/section-calltoaction.vue';
+  import sectionContact from './components/section-contact.vue';
 </script>
 
 <template>
   <sectionHeaders></sectionHeaders>
   <sectionHero></sectionHero>
   <sectionNewsletter></sectionNewsletter>
-  <sectionAbout></sectionAbout>
+  <sectionAbout
+    founded="2018"
+  ></sectionAbout>
   <sectionfact></sectionfact>
   <sectionServices></sectionServices>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <sectionCalltoaction></sectionCalltoaction>
+  <sectionContact></sectionContact>
 </template>
 
 <script>

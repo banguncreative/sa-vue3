@@ -4,8 +4,8 @@
 
 <template>
     <section id="facts">
-        <slice-component>
-            <div style="background-color: #c0ffbe" class="m-0 p-0">
+        <slice-component color="#d3fcc2">
+            <div style="background-color: #d3fcc2" class="m-0 p-0">
                 <div class="container"  data-aos="fade-up">
                     <div class="section-header">
                         <h3 class="section-title m-0">{{title}}</h3>
