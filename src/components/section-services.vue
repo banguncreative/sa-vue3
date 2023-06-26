@@ -13,7 +13,7 @@
                     class="col-lg-4 col-md-6" 
                     data-aos="zoom-in"
                 >
-                    <div class="box">
+                    <div class="box" style="min-height: 300px;">
                         <div class="icon">
                             <a :href="service.url">
                                 <i :class="service.icon"></i>
@@ -30,6 +30,14 @@
                         >
                             {{service.description}}
                         </p>
+                        <ul style="text-align: left;">
+                            <li
+                                v-for="item in service.child"
+                                style="list-style-type: upper-roman;"
+                            >
+                                {{ item }}
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -45,20 +53,38 @@
                 description: "Kami bergerak di bidang jasa konsultasi, berikut adalah beberapa jasa yang kami tawarkan:",
                 services: [
                     {
-                        title: "Konsultasi Lingkungan",
+                        title: "Dokumen Lingkungan",
                         description: "",
-                        url: "#",
-                        icon: "fa fa-pagelines"
-                    },
-                    {
-                        title: "Dokumen AMDAL",
-                        description: "",
+                        child:[
+                            "AMDAL",
+                            "UKL-UPL",
+                            "SPPL",
+                            "Pertek Baku Mutu Air",
+                            "Pertek Emisi",
+                            "Rintek B3",
+                            "Laporan Monitoring"
+                        ],
                         url: "#",
                         icon: "fa fa-file-text-o"
                     },
                     {
-                        title: "Pemantauan Lingkungan",
+                        title: "Pendampingan Perusahaan",
                         description: "",
+                        child:[
+                            "PROPER",
+                            "Audit Lingkungan"
+                        ],
+                        url: "#",
+                        icon: "fa fa-pagelines"
+                    },
+                    {
+                        title: "Pembuatan IPAL",
+                        description: "",
+                        child:[
+                            "Perencanaan",
+                            "Konstruksi",
+                            "Pengawasan"
+                        ],
                         url: "#",
                         icon: "fa fa-flask"
                     }

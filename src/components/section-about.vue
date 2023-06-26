@@ -1,9 +1,9 @@
 <template>
-    <section id="about">
-        <div class="container" data-aos="fade-up">
+    <section id="about" class="">
+        <div class="container mb-5" data-aos="fade-up" style="min-height: 600px;">
             <div class="row about-container">
                 <div class="col-lg-6 content order-lg-1 order-2">
-                    <h2 class="title mt-4" >{{title}}</h2>
+                    <h2 class="title mt-5" >{{title}}</h2>
                     <p v-html="about"></p>
                     <div 
                         v-for="link in links"
