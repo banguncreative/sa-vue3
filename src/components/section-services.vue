@@ -13,7 +13,7 @@
                     class="col-lg-4 col-md-6" 
                     data-aos="zoom-in"
                 >
-                    <div class="box" style="min-height: 300px;">
+                    <div class="box">
                         <div class="icon">
                             <a :href="service.url">
                                 <i :class="service.icon"></i>
@@ -33,7 +33,7 @@
                         <ul style="text-align: left;">
                             <li
                                 v-for="item in service.child"
-                                style="list-style-type: upper-roman;"
+                                class="service-list"
                             >
                                 {{ item }}
                             </li>
@@ -93,3 +93,23 @@
         },
     }
 </script>
+
+<style scoped>
+    .box {
+        min-height: 350px;
+        padding: 20px;
+    }
+    .service-list {
+        list-style-type: none;
+        padding: 3px;
+        text-align: center;
+    }
+
+    .service-list:hover {
+        background-color: bisque;
+    }
+
+    ul {
+        padding: 0;
+    }
+</style>

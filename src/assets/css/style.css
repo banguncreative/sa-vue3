@@ -10,6 +10,12 @@
 --------------------------------------------------------------*/
 *{
   --accent-color:#338275;
+  --accent-color_2:#1B515E;
+  --accent-color_3:#88B990;
+  --accent-color_4:#ABCD9E;
+
+
+
 }
 
 body {
@@ -414,7 +420,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 18px;
   bottom: 0;
   z-index: 998;
-  background: rgba(52, 59, 64, 0.9);
+  background: var(--accent-color_3);
   left: -260px;
   width: 260px;
   overflow-y: auto;
@@ -653,7 +659,6 @@ section {
 /* Facts Section
 --------------------------------*/
 #facts {
-  background: #f7f7f7;
   padding: 80px 0 60px 0;
 }
 

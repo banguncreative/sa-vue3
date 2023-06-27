@@ -1,4 +1,6 @@
 <script setup>
+  import profile from "./profile";
+
   import HelloWorld from './components/HelloWorld.vue'
   import TheWelcome from './components/TheWelcome.vue'
 
@@ -12,6 +14,7 @@
   import sectionCalltoaction from './components/section-calltoaction.vue';
   import sectionContact from './components/section-contact.vue';
   import sectionClientaviliation  from './components/section-clientaviliation.vue';
+  import sectionTeam from "./components/section-team/index.vue";
 </script>
 
 <template>
@@ -26,7 +29,12 @@
   <sectionCalltoaction></sectionCalltoaction>
   <sectionClientaviliation
     color="#338275"
+    :data_endpoint="data_endpoint"
   ></sectionClientaviliation>
+
+  <sectionTeam
+    :data_endpoint="data_endpoint"
+  ></sectionTeam>
   
 
   <sectionContact></sectionContact>
@@ -34,6 +42,11 @@
 
 <script>
   export default{
+    data:function(){
+      return {
+        data_endpoint: profile.data_endpoint
+      }
+    },
     mounted(){
       AOS.init()
 

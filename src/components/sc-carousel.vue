@@ -51,11 +51,14 @@
                         }
                     }
                 },
-                items:[],
-                data_endpoint : "https://script.google.com/macros/s/AKfycbyYEALLK7s0yALbNzLRjuRihfb_1mSgG4BdEIrBygQtDnchYs_r/exec"
+                items:[]
             }
         },
         props:{
+            "data_endpoint":{
+                type: String,
+                required: true
+            },
             "title":{
                 type:String,
                 required:true

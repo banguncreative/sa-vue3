@@ -13,8 +13,8 @@
                         data-aos-delay="100"
                     >
                         <div class="icon"><i :class="link.icon"></i></div>
-                        <h4 class="title"><a href="" style="color:#2557e6">{{link.title}}</a></h4>
-                        <p class="description" style="color:#2faf55">{{link.description}}</p>
+                        <h4 class="title"><a href="" style="color: var(--accent-color_2)">{{link.title}}</a></h4>
+                        <p class="description" style="color:var(--accent-color_3)">{{link.description}}</p>
                     </div>
                 </div>
                 <div class="col-lg-6 background order-lg-2 order-1" data-aos="fade-left" data-aos-delay="100"></div>

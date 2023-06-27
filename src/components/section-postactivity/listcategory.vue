@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="col-md-3">
+    <div class="col-md-3 list-post">
         <h2 style="text-decoration:underline">{{ category }}</h2>
         <span v-if="!seen" style="font-size:11px">no post yet</span>
         <list-post v-if="seen" v-for="entry in entries" 
@@ -38,3 +38,17 @@
         }
     }
 </script>
+
+<style scoped>
+    .list-post{
+        min-width: 250px;
+    }
+
+    h2 {
+        color: var(--accent-color_3);
+    }
+
+    a {
+        color: var(--accent-color_3);
+    }
+</style>

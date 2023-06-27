@@ -30,7 +30,7 @@
 	</header>
     <svg class="" id="header-path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 140" style="top: 0px; position: fixed; right: 0;z-index: 2;">
         <path fill="#88B990" fill-opacity="0.9" d="M0,128L120,106.7C240,85,480,43,720,26.7C960,11,1200,21,1320,26.7L1440,32L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
-        <path fill="#ABCD9E" fill-opacity="0.75" d="M 0 85 L 1440 32 L 1440 0 L 0 0 Z"></path>
+        <path fill="#ABCD9E" fill-opacity="0.75" d="M 0 85 L 1440 55 L 1440 0 L 0 0 Z"></path>
     </svg>
     <!-- End Header -->
 </template>
@@ -42,7 +42,7 @@
                 links: [
                     {
                         name: "Home",
-                        url: "index.html",
+                        url: "#hero",
                         isActive: true
 
                     },
@@ -57,8 +57,8 @@
 
                     },
                     {
-                        name: "Portofolio",
-                        url: "#portofolio"
+                        name: "Affiliated",
+                        url: "#Affiliated"
 
                     },
                     {
