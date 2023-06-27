@@ -37,7 +37,9 @@
   ></sectionTeam>
   
 
-  <sectionContact></sectionContact>
+  <sectionContact
+    :profile="profile"
+  ></sectionContact>
 </template>
 
 <script>

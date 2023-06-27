@@ -1,3 +1,6 @@
+<script setup>
+    import scSocials from '../sc-socials.vue';
+</script>
 <template>
     <div class="container section-header align-items-center text-center" id="team">
         <h3 class="section-title">Team</h3>
@@ -54,3 +57,13 @@
         }
     }
 </script>
+
+<style scoped>
+    .card-img-top{
+        transition: 0.3s;
+    }
+    .card-img-top:hover{
+        transform: translateY(-5px) scale(1.1) rotate(2deg);
+        box-shadow: 3px 2px 35px var(--gray-dark-200);
+    }
+</style>
