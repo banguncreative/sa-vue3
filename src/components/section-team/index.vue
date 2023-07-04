@@ -1,38 +1,42 @@
 <script setup>
     import scSocials from '../sc-socials.vue';
+    import member from './member.vue';
 </script>
 <template>
-    <div class="container section-header align-items-center text-center" id="team">
+    <div class="container-fluid section-header align-items-center text-center" id="team">
         <h3 class="section-title">Team</h3>
         <p class="section-description">Sapa tim profesional kami</p>
         <div v-if="!members.length">Loading...</div>
-        <div 
-            v-if="members.length"
-            class="row d-flex justify-content-center"
-        >
-            <div
-                v-for="member in members"
-                class="card col-lg-3 col-md-6 mb-2 align-items-center text-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
-                data-aos-once="true"
-                style="width: 15rem; border:none"
-            >
-                <div class="card-img-top bg-img"
-                    :style="{
-                        backgroundColor: 'var(--accent-color_4)',
-                        outline: '2px dashed #fff',
-                        outlineOffset:'-5px',
-                        filter:'brightness(1) contrast(1.2)',
-                        backgroundImage: 'Url('+(member.profile? member.profile : member.gender>0?'/src/assets/img/sc-profile/profile-no-photo.png' : '/src/assets/img/sc-profile/profile-no-photo2.png')+')',
-                    }
-                    "
-                >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div
+                        v-if="chief"
+                        id="chief"
+                        :style="{
+                            backgroundImage: `Url(${chief.profile})`
+                        }"
+                    >
+                        <div class="card-body chief-card">
+                            <h5 class="card-title">{{chief.name}}</h5>
+                            <i class="card-text" style="font-size:12px">{{chief.jobdesk}}</i>
+                            <sc-socials
+                                :socials="chief.socials"
+                            />
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">{{member.name}}</h5>
-                    <i class="card-text" style="font-size:12px">{{member.jobdesk}}</i>
-                    <sc-socials
-                        :socials="member.socials"
-                    />
+                <div class="col-lg-8 p-3">
+                    <div 
+                        v-if="members.length"
+                        class="row d-flex justify-content-center members"
+                    >
+                        <member
+                            v-for="member in members"
+                            :member="member"
+                        >
+                        </member>
+                    </div>
                 </div>
             </div>
         </div>
@@ -53,17 +57,53 @@
         mounted(){
             fetch(this.data_endpoint+"?m=getMainMember")
 			.then(r => r.json())
-			.then(data => this.members = data);
+			.then(data => {
+                this.chief = data.find(x => x.jobdesk == 'Chief Operating Officer');
+                var chief_loc = data.indexOf(this.chief);
+                
+                // remove chief from collection
+                data.splice(chief_loc,1);
+                this.members = data
+
+            });
         }
     }
 </script>
 
 <style scoped>
-    .card-img-top{
-        transition: 0.3s;
+    .members{
+        max-width: 100vw;
     }
-    .card-img-top:hover{
-        transform: translateY(-5px) scale(1.1) rotate(2deg);
-        box-shadow: 3px 2px 35px var(--gray-dark-200);
+
+    #chief{
+        width: 100%; 
+        max-width: 300px; 
+        height: 450px; 
+
+        position: sticky;
+        top: 100px;
+        /* background-color: aqua;  */
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 60px;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: 0.3s;
+
+
+    }
+
+    .chief-card{
+        width: 300px;
+        padding: 10px;
+        
+        background-color: aliceblue;
+        position: absolute;
+        bottom: -30px;
+    }
+
+    #chief:hover{
+        transform: scale(1.1) translateY(10px);
     }
 </style>

@@ -18,6 +18,7 @@
             >
                 <div 
                 class="bg-img on-mouse-color"
+                :title="item.name"
                 :style="{
                     width: width,
                     height: width,
