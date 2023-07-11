@@ -54,7 +54,6 @@
         },
         methods: {
             doSlideshow(){
-                console.log("aaa")
                 if(this.nextimage>=this.images.length){this.nextimage=0;}
                 $('#hero')
                 .css('background-image','linear-gradient(90deg, rgba(171,205,158,0.3) 10%, rgba(255,255,255,0.5) 77%), url("'+this.images[this.nextimage++]+'")')

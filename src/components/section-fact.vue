@@ -15,6 +15,7 @@
                         class="row counters"
                     >
                         <div 
+                            v-if="datas.length>0"
                             v-for="counter in counters" 
                             class="col-lg-3 col-6 text-center"
                         >
@@ -36,25 +37,49 @@
                 description: `
                     Selama <strong class="y-experienced"></strong> mengabdi, berikut ringkas perjalanan kami:
                 `,
-                counters: [
+            }
+        },
+        props:{
+            datas: Object
+        },
+        computed:{
+            counters(){
+                var byVendor = {};
+                var projects = 0;
+
+
+                this.datas.map( e => {
+                    projects = projects + e.data.length;
+                    e.data.map(k => {
+                        var key = k.client;
+                        if(!byVendor.hasOwnProperty(key)) byVendor[key] = [];
+                        byVendor[key].push(k);
+                    })
+                });
+
+                var proper = this.datas.find(e => e.sheetName == "PROPER").data.length;
+                var documents = projects - proper + (proper *4);
+
+
+                return [
                     {
-                        count: 232,
+                        count: Object.keys(byVendor).length,
                         title: "Clients"
                     },
                     {
-                        count: 521,
+                        count: projects,
                         title: "Projects"
                     },
                     {
-                        count: 463,
+                        count: documents*12*5,
                         title: "Hours Of Support"
                     },
                     {
-                        count: 315,
+                        count: documents,
                         title: "Repports"
                     }
                 ]
             }
-        },
+        }
     }
 </script>

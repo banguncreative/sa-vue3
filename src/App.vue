@@ -24,7 +24,9 @@
     <sectionAbout
       founded="2018"
     ></sectionAbout>
-    <sectionfact></sectionfact>
+    <sectionfact
+      :datas="experiences"
+    ></sectionfact>
     <sectionServices></sectionServices>
     <sectionCalltoaction></sectionCalltoaction>
     <sectionClientaviliation
@@ -76,8 +78,15 @@
                 url: "#contact"
 
             }
-        ]
+        ],
+        experiences: [],
       }
-    }
+    },
+    mounted: function(){
+      var method = "getJobList"
+      fetch(this.data_endpoint+"?m="+method)
+        .then(r => r.json())
+        .then(data => this.experiences = data.data);
+    },
   }
 </script>
