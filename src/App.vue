@@ -12,6 +12,7 @@
   import sectionCalltoaction from './components/section-calltoaction.vue';
   import sectionClientaviliation  from './components/section-clientaviliation.vue';
   import sectionTeam from "./components/section-team/index.vue";
+  import sectionExperience from "./components/section-experince.vue";
 </script>
 
 <template>
@@ -22,13 +23,20 @@
     <sectionHero></sectionHero>
     <sectionNewsletter></sectionNewsletter>
     <sectionAbout
-      founded="2018"
+      :founded="profile.founded"
     ></sectionAbout>
+    <sectionExperience
+      :exp_data="experiences"
+    ></sectionExperience>
     <sectionfact
       :datas="experiences"
     ></sectionfact>
-    <sectionServices></sectionServices>
-    <sectionCalltoaction></sectionCalltoaction>
+    <sectionServices
+      :wa="profile.contacts.wa"
+    ></sectionServices>
+    <sectionCalltoaction
+      :contact="profile.contacts"
+    ></sectionCalltoaction>
     <sectionClientaviliation
       color="#338275"
       :data_endpoint="data_endpoint"

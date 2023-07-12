@@ -22,6 +22,15 @@
                             <span data-toggle="counter-up">{{counter.count}}</span>
                             <p>{{counter.title}}</p>
                         </div>
+
+                        <div 
+                            v-if="datas.length<1"
+                            class="spinner-border text-secondary text-center" 
+                            role="status"
+                            style="margin: auto;"
+                        >
+                            <span class="sr-only">Loading...</span>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -33,9 +33,12 @@
                         <ul style="text-align: left;">
                             <li
                                 v-for="item in service.child"
-                                class="service-list"
+                                class="service-list position-relative"
                             >
                                 {{ item }}
+                                <a :href="wame(wa, 'hallo, saya ingin berkonsultasi terkait '+item)" target="_blank" class="callme position-absolute" style="right:20px;">
+                                    <i class="fa fa-whatsapp text-white" aria-hidden="true"></i>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -46,6 +49,8 @@
 </template>
 
 <script>
+import choppingLib from './chopping.lib';
+
     export default{
         data: function(){
             return {
@@ -59,8 +64,9 @@
                             "AMDAL",
                             "UKL-UPL",
                             "SPPL",
-                            "Pertek Baku Mutu Air",
-                            "Pertek Emisi",
+                            "Baku Mutu Air Limbah (BMAL)",
+                            "Baku Mutu Emisi (BME)",
+                            "Pertek",
                             "Rintek B3",
                             "Laporan Monitoring"
                         ],
@@ -72,6 +78,7 @@
                         description: "",
                         child:[
                             "PROPER",
+                            "PROPERDA",
                             "Audit Lingkungan"
                         ],
                         url: "#",
@@ -91,6 +98,10 @@
                 ]
             }
         },
+        props:{
+            wa: String
+        },
+        methods: choppingLib
     }
 </script>
 
@@ -103,13 +114,27 @@
         list-style-type: none;
         padding: 3px;
         text-align: center;
+        transition: 0.5s;
     }
 
     .service-list:hover {
-        background-color: bisque;
+        background-color: var(--accent-color_4);
+        color: white;
+        font-weight: 600;
+        padding: 10px;
+        
     }
 
     ul {
         padding: 0;
+    }
+
+    .callme{
+        display: none;
+    }
+
+    .service-list:hover .callme{
+        transform: scale(1.5);
+        display: inline-block;
     }
 </style>

@@ -4,6 +4,7 @@
     import cpright from './section-footer/cpright.vue';
     import wave from './section-footer/wave.vue';
     import scFeedback from './sc-feedback.vue';
+import choppingLib from './chopping.lib';
 </script>
 
 <template>
@@ -62,7 +63,7 @@
                                     <i class="fa fa-envelope"></i> <p>info@example.com</p>
                                 </div> 
                                 <div>
-                                    <i class="fa fa-whatsapp "></i> <a target="_Blank" :href="wame(profile.contacts.wa, 'Hallo, dengan Surya Cemerlang. saya ingin berkonsultasi')"><p>+{{ chopPhone(profile.contacts.tel, 3) }}</p></a>
+                                    <i class="fa fa-whatsapp "></i> <a target="_Blank" :href="wame(profile.contacts.wa, 'Hallo, dengan Surya Cemerlang. saya ingin berkonsultasi')"><p>+{{ chopPhone(profile.contacts.wa+" ", 4) }}</p></a>
                                 </div>
                                 <div>
                                     <i class="fa fa-phone"></i> <a :href="'tel://'+profile.contacts.tel"><p>+{{ chopPhone(profile.contacts.tel, 3) }}</p></a>
@@ -82,6 +83,13 @@
 </template>
 
 <script>
+    import choppingLib from './chopping.lib';
+
+    choppingLib.column = function(_length){
+        var col = Math.round(12/_length);
+        return `col-lg-${col}`
+    }
+
     export default{
         data: function(){
             return {
@@ -91,33 +99,7 @@
         props:{
             profile: Object
         },
-        methods:{
-            column(_length){
-                var col = Math.round(12/_length);
-                return `col-lg-${col}`
-            },
-            chop(obj, n){
-                var new_arr = [];
-                while(obj.length > 0){
-                    new_arr.push(obj.splice(0,n))
-                }
-
-                return new_arr;
-            },
-            chopPhone(txt, n){
-                var obj = txt.split("").reverse();
-                var new_arr = [];
-                while(obj.length > 0){
-                    new_arr.push(obj.splice(0,n))
-                }
-
-                return new_arr.map(e => e.reverse().join("")).reverse().join(" ");
-            },
-            wame(_tel, _text){
-                _text = encodeURI(_text);
-                return  `https://wa.me/${_tel}?text=${_text}`
-            }
-        }
+        methods:choppingLib
     }
 </script>
 
