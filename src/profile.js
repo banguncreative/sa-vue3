@@ -51,11 +51,11 @@ export default{
             url:"https://goo.gl/maps/kGSix4D4N5MSBha49"
         },
         {
-            name:"Blog",
+            name:"Surya Cemerlang Blog",
             url:"http://blog.surya-cemerlang.co.id"
         },
         {
-            name:"RSS",
+            name:"RSS/ATOM",
             url:"https://suryacemerlang-sc.blogspot.com/feeds/posts/default/"
         },
     ],
