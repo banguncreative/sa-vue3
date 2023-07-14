@@ -6,9 +6,9 @@
     <header id="header" class="header-transparent">
         <waveAnimated></waveAnimated>
         <div class="container">
-            <div id="logo" class="pull-left">
+            <div id="logo" class="pull-left" style="width: 190px;">
                 <a href="index.html">
-                    <img src="src/assets/img/logo.png" alt="surya cemerlang" style="filter:brightness(0.8) contrast(0.7); width:70%">
+                    <img src="src/assets/img/logo.png" alt="surya cemerlang" style="filter:brightness(0.8) contrast(0.7); width:75%">
                 </a>
             </div>
             <nav id="nav-menu-container">

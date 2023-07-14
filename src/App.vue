@@ -13,6 +13,7 @@
   import sectionClientaviliation  from './components/section-clientaviliation.vue';
   import sectionTeam from "./components/section-team/index.vue";
   import sectionExperience from "./components/section-experince.vue";
+  import globalModal from "./components/global/global-modal.vue";
 </script>
 
 <template>
@@ -25,9 +26,20 @@
     <sectionAbout
       :founded="profile.founded"
     ></sectionAbout>
-    <sectionExperience
-      :exp_data="experiences"
-    ></sectionExperience>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#expmodal">
+      Launch demo modal
+    </button>
+
+    <global-modal id="expmodal" title="Pengalaman Kerja">
+      <template v-slot:modal-body>
+        <sectionExperience
+          :exp_data="experiences"
+        ></sectionExperience>
+      </template>
+    </global-modal>
+
     <sectionfact
       :datas="experiences"
     ></sectionfact>

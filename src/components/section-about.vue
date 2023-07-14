@@ -13,7 +13,9 @@
                         data-aos-delay="100"
                     >
                         <div class="icon"><i :class="link.icon"></i></div>
-                        <h4 class="title"><a href="" style="color: var(--accent-color_2)">{{link.title}}</a></h4>
+                        <h4 class="title">
+                            <a href="" style="color: var(--accent-color_2)">{{link.title}}</a>
+                        </h4>
                         <p class="description" style="color:var(--accent-color_3)">{{link.description}}</p>
                     </div>
                 </div>

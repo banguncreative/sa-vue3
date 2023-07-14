@@ -5,7 +5,7 @@
     <section class="container-fluid">
         <div 
             v-if="exp_data"
-            v-for="experience in exp_data"
+            v-for="experience in clearData"
             class="row"
         >
             <div class="col-lg-2" style="display: block;">
@@ -28,6 +28,12 @@
         props:{
             exp_data: Object
         },
+        computed:{
+            clearData(){
+                console.log(this.exp_data)
+                return this.exp_data.filter(e => e.data.length > 0);
+            }
+        }
     }
 </script>
 
@@ -35,6 +41,6 @@
     .sticky{
         position: -webkit-sticky;
         position: sticky;
-        top: 200px;
+        top: 10px;
     }
 </style>
