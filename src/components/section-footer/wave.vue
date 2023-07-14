@@ -16,7 +16,7 @@
         <text x="1100" y="280" fill="#fff" class="fa" rotate="-15" style="font-size:72px;">+</text>
 
 
-        <image href="src/assets/img/logo.png" x="50" y="150" alt="CV. Surya Cemerlang" style="filter: brightness(10)"/>
+        <image href="/assets/img/logo.png" x="50" y="150" alt="CV. Surya Cemerlang" style="filter: brightness(10)"/>
 
     </svg>
 </template>

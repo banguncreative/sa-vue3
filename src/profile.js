@@ -43,17 +43,21 @@ export default{
     ],
     usefullLinks:[
         {
-            name:"Blog",
-            url:"http://blog.surya-cemerlang.co.id"
-        },
-        {
             name:"Semesta Alam Ceta, PT",
             url:"https://semestaalamceta.co.id"
         },
         {
             name:"Rose Print Digital Printing",
             url:"https://goo.gl/maps/kGSix4D4N5MSBha49"
-        }
+        },
+        {
+            name:"Blog",
+            url:"http://blog.surya-cemerlang.co.id"
+        },
+        {
+            name:"RSS",
+            url:"https://suryacemerlang-sc.blogspot.com/feeds/posts/default/"
+        },
     ],
     jambuka:[
         {

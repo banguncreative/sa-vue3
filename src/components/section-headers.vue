@@ -8,7 +8,7 @@
         <div class="container">
             <div id="logo" class="pull-left" style="width: 190px;">
                 <a href="index.html">
-                    <img class="nav-logo" src="src/assets/img/logo.png" alt="surya cemerlang">
+                    <img class="nav-logo" src="/assets/img/logo.png" alt="surya cemerlang">
                 </a>
             </div>
             <nav id="nav-menu-container">

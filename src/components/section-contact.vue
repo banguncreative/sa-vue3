@@ -3,7 +3,6 @@
     import footerInfo from './section-footer/footer-info.vue';
     import cpright from './section-footer/cpright.vue';
     import wave from './section-footer/wave.vue';
-    import scFeedback from './sc-feedback.vue';
 import choppingLib from './chopping.lib';
 </script>
 
@@ -54,7 +53,7 @@ import choppingLib from './chopping.lib';
                                 title="useful-link"
                             >
                                 <div v-for="link in profile.usefullLinks">
-                                    <i class="fa fa-link"></i> <a :href="link.url"><p>{{ link.name }}</p></a>
+                                    <i class="fa fa-link"></i> <a :href="link.url" target="_blank"><p>{{ link.name }}</p></a>
                                 </div>
                             </footer-info>
                         </div>

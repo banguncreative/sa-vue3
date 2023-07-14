@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-7" data-aos="zoom-left" data-aos-delay="300" style="background-image: url(''); background-size: cover; background-repeat: no-repeat; background-position: bottom right; height:100vh;">
-                    <img class="face-of-web" src="/src/assets/img/face-web_2.png" alt="" style="position: absolute; bottom:0px">
+                    <img class="face-of-web" src="/assets/img/face-web_2.png" alt="" style="position: absolute; bottom:0px">
                 </div>
             </div>
         </div>
@@ -41,9 +41,9 @@
         data: function(){
             return {
                 images: [
-                    'src/assets/img/hero-bg.jpg',
-                    'src/assets/img/hero-bg_2.jpg',
-                    'src/assets/img/hero-bg_3.jpg'
+                    '/assets/img/hero-bg.jpg',
+                    '/assets/img/hero-bg_2.jpg',
+                    '/assets/img/hero-bg_3.jpg'
                 ],
                 nextimage: 0
             }
