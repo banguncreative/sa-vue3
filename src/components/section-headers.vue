@@ -8,7 +8,7 @@
         <div class="container">
             <div id="logo" class="pull-left" style="width: 190px;">
                 <a href="index.html">
-                    <img src="src/assets/img/logo.png" alt="surya cemerlang" style="filter:brightness(0.8) contrast(0.7); width:75%">
+                    <img class="nav-logo" src="src/assets/img/logo.png" alt="surya cemerlang">
                 </a>
             </div>
             <nav id="nav-menu-container">
@@ -55,6 +55,10 @@
     .logo {
     display: block;
     margin: 0 auto 2rem;
+    }
+
+    .nav-logo{
+        filter:brightness(0.8) contrast(0.7); width:75%
     }
 
     @media (min-width: 1024px) {

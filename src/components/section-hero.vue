@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-7" data-aos="zoom-left" data-aos-delay="300" style="background-image: url(''); background-size: cover; background-repeat: no-repeat; background-position: bottom right; height:100vh;">
-                    <img src="/src/assets/img/face-web_2.png" alt="" style="position: absolute; bottom:0px">
+                    <img class="face-of-web" src="/src/assets/img/face-web_2.png" alt="" style="position: absolute; bottom:0px">
                 </div>
             </div>
         </div>
@@ -70,5 +70,11 @@
 <style scoped>
     #hero {
         background: linear-gradient(40deg, rgba(2,0,36,1) 0%, rgba(51,130,117,1) 40%, rgba(171,205,158,1) 99%);
+    }
+
+    @media (max-width: 720px){
+        .face-of-web{
+            display: none;
+        }
     }
 </style>

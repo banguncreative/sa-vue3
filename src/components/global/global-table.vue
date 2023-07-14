@@ -1,6 +1,6 @@
 <template>
     <table data-toggle="table" class="table table-striped" style="">
-        <thead class="text-white" style="background-color: var(--accent-color_3);">
+        <thead class="text-white sticky" style="background-color: var(--accent-color_3);">
             <tr>
                 <th 
                     v-for="head in arr_header(dats[0])"
@@ -68,4 +68,8 @@
 </script>
 
 <style scoped>
+    .sticky{
+            position: sticky !important;
+            top: 0px;
+        }
 </style>

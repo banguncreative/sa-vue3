@@ -1,5 +1,7 @@
 <script setup>
     import sliceComponent from "./slice-component.vue";
+    import sectionExperience from "./section-experince.vue";
+    import globalModal from "./global/global-modal.vue";
 </script>
 
 <template>
@@ -11,9 +13,7 @@
                         <h3 class="section-title m-0">{{title}}</h3>
                         <p class="section-description text-succes" v-html="description"></p>
                     </div>
-                    <div
-                        class="row counters"
-                    >
+                    <div class="row counters">
                         <div 
                             v-if="datas.length>0"
                             v-for="counter in counters" 
@@ -32,9 +32,24 @@
                             <span class="sr-only">Loading...</span>
                         </div>
                     </div>
+                    <div v-if="datas.length>0" class="text-center pt-3 pb-0">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn exp-btn" data-toggle="modal" data-target="#expmodal">
+                            Tampilkan Pengalaman
+                        </button>
+                    </div>
                 </div>
             </div>
         </slice-component>
+
+        <!-- experience thing -->
+        <global-modal id="expmodal" title="Pengalaman Kerja">
+            <template v-slot:modal-body>
+                <sectionExperience
+                :exp_data="datas"
+                ></sectionExperience>
+            </template>
+        </global-modal>
     </section>
 </template>
 
@@ -88,7 +103,42 @@
                         title: "Repports"
                     }
                 ]
+            },
+            dataWoClient(){
+                var woClient = this.datas.map(e => {
+                    var data = e.data.map(k => {
+                        var {pekerjaan, client, kota, tahun} = k;
+                        return {
+                            pekerjaan,
+                            kota,
+                            tahun
+                        };
+                    })
+
+                    e.data = data;
+                    return e
+                });
+
+                return woClient;
             }
         }
     }
 </script>
+
+
+<style scoped>
+    .exp-btn{
+        min-width: 250px; 
+        color: var(--accent-color);
+        outline: 2px dashed;
+        outline-color: var(--accent-color_3);
+        transition: 0.3s;
+    }
+
+    .exp-btn:hover{
+        background-color: var(--accent-color_3);
+        outline: 2px solid var(--accent-color_3);
+        color: white;
+        transform: translateY(-3px);
+    }
+</style>

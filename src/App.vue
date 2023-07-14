@@ -12,8 +12,6 @@
   import sectionCalltoaction from './components/section-calltoaction.vue';
   import sectionClientaviliation  from './components/section-clientaviliation.vue';
   import sectionTeam from "./components/section-team/index.vue";
-  import sectionExperience from "./components/section-experince.vue";
-  import globalModal from "./components/global/global-modal.vue";
 </script>
 
 <template>
@@ -22,33 +20,25 @@
     :profile="profile"
   >
     <sectionHero></sectionHero>
+
     <sectionNewsletter></sectionNewsletter>
+
     <sectionAbout
       :founded="profile.founded"
     ></sectionAbout>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#expmodal">
-      Launch demo modal
-    </button>
-
-    <global-modal id="expmodal" title="Pengalaman Kerja">
-      <template v-slot:modal-body>
-        <sectionExperience
-          :exp_data="experiences"
-        ></sectionExperience>
-      </template>
-    </global-modal>
-
     <sectionfact
       :datas="experiences"
     ></sectionfact>
+
     <sectionServices
       :wa="profile.contacts.wa"
     ></sectionServices>
+
     <sectionCalltoaction
       :contact="profile.contacts"
     ></sectionCalltoaction>
+    
     <sectionClientaviliation
       color="#338275"
       :data_endpoint="data_endpoint"

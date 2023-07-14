@@ -34,21 +34,27 @@ import choppingLib from './chopping.lib';
             >
                 <div class="container" id="footer-info">
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 mb-3">
                             <footer-info
-                                title="feedback"
+                                title="additional info"
                             >
+                                <b class="ml-3">
+                                    Informasi jam buka
+                                </b>
+                                <table class="pb-3 ml-3">
+                                    <tr v-for="hari in profile.jambuka">
+                                        <td style="min-width: 50px;">{{ hari.name }}</td>
+                                        <td>: {{ hari.pukul }}</td>
+                                    </tr>
+                                </table>
                             </footer-info>
                         </div>
                         <div class="col-lg-4">
                             <footer-info
                                 title="useful-link"
                             >
-                                <div>
-                                    <i class="fa fa-link"></i> <a href="#"><p>Semesta Alam Ceta, PT</p></a>
-                                </div> 
-                                <div>
-                                    <i class="fa fa-link"></i> <a href="#"><p>Rose Print Digital Printing</p></a>
+                                <div v-for="link in profile.usefullLinks">
+                                    <i class="fa fa-link"></i> <a :href="link.url"><p>{{ link.name }}</p></a>
                                 </div>
                             </footer-info>
                         </div>
@@ -57,10 +63,10 @@ import choppingLib from './chopping.lib';
                                 title="contact"
                             >
                                 <div>
-                                    <i class="fa fa-map-marker"></i> <p>Perumahan Puri Indah CC 8, Suko, Kec.Sidoarjo Kab.Sidoarjo<br>Jawa Timur Kode-Pos.61224</p>
+                                    <i class="fa fa-map-marker"></i> <p>{{ profile.address }}</p>
                                 </div> 
                                 <div>
-                                    <i class="fa fa-envelope"></i> <p>info@example.com</p>
+                                    <i class="fa fa-envelope"></i> <p>{{ profile.contacts.email }}</p>
                                 </div> 
                                 <div>
                                     <i class="fa fa-whatsapp "></i> <a target="_Blank" :href="wame(profile.contacts.wa, 'Hallo, dengan Surya Cemerlang. saya ingin berkonsultasi')"><p>+{{ chopPhone(profile.contacts.wa+" ", 4) }}</p></a>

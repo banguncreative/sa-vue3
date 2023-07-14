@@ -20,7 +20,7 @@
 						</p>
 					</div>
 					<div class="col-lg-3 cta-btn-container text-center" >
-						<a class="cta-btn align-middle text-start" style="margin: auto;" :href="wame(contact.wa, 'hallo Surya Cemerlang. saya ingin benkonsultasi terkait lingkungan hidup.')" target="_blank">
+						<a class="cta-btn align-middle text-start" style="margin: auto; min-width: 250px;" :href="wame(contact.wa, 'hallo Surya Cemerlang. saya ingin benkonsultasi terkait lingkungan hidup.')" target="_blank">
 							<span class="m-0 p-0" style="font-size: 8px;">Konsultasi melalui </span>
 							<p class="p-0 m-0" style="font-size: 24px; line-height: 10px; margin-bottom: 15px;">
 								whatsapp <i class="fa fa-whatsapp" aria-hidden="true" style="transform: scale(1.5) translateY(-8px) translateX(7px);"></i>
