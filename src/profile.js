@@ -4,8 +4,8 @@ export default{
     address:"Perumahan Puri Indah CC 8, Suko, Kec.Sidoarjo Kab.Sidoarjo<br>Jawa Timur Kode-Pos.61224",
     contacts: {
         tel: "6281235588840",
-        wa: "6282141233990",
-        email: ""
+        wa: "6281235588840",
+        email: "cv.suryacemerlangtimur@gmail.com"
     },
     data_endpoint: "https://script.google.com/macros/s/AKfycbw5VE56-NhQuSPd4X9B5HqZheDtdAopamG1v7pq9d7-s87Mnz7zQH58RL9SFA1cBHZH9w/exec",
     socials:{
@@ -15,10 +15,30 @@ export default{
         google: "#",
         linkedin: "#"
     },
+    aboutLinks:[
+        {
+            title: "Legal & Badan Hukum",
+            description: "Dokumen perusahaan, dokumen resmi pendukung termasuk didalamnya Company Profile ...",
+            url: "#",
+            icon: "fa fa-institution"
+        },
+        {
+            title: "Galeri & Dokumentasi",
+            description: "Foto dokumentasi proyek, meeting, kegiatan kantor lainnya ...",
+            url: "#",
+            icon: "fa fa-photo"
+        },
+        {
+            title: "Publikasi",
+            description: "Softcopy handout meeting, hasil publikasi, bahan presentasi, ...",
+            url: "http://blog.surya-cemerlang.co.id/search/label/Publications",
+            icon: "fa fa-pencil-square-o"
+        }
+    ],
     usefullLinks:[
         {
             name:"Blog",
-            url:"https://blog.surya-cemerlang.co.id"
+            url:"http://blog.surya-cemerlang.co.id"
         },
         {
             name:"Semesta Alam Ceta, PT",

@@ -25,6 +25,7 @@
 
     <sectionAbout
       :founded="profile.founded"
+      :links="profile.aboutLinks"
     ></sectionAbout>
 
     <sectionfact

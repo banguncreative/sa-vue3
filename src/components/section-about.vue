@@ -14,7 +14,7 @@
                     >
                         <div class="icon"><i :class="link.icon"></i></div>
                         <h4 class="title">
-                            <a href="" style="color: var(--accent-color_2)">{{link.title}}</a>
+                            <a :href="link.url" style="color: var(--accent-color_2)">{{link.title}}</a>
                         </h4>
                         <p class="description" style="color:var(--accent-color_3)">{{link.description}}</p>
                     </div>
@@ -35,33 +35,14 @@
                     setidaknya genap sudah <strong class="y-experienced"></strong> pengalaman kami dalam jasa konsultasi. 
                     Menjalankan fungsi perencanaan dan pemantauan, kami terus belajar dan berinovasi demi terwujutnya visi lingkungan hidup yang sehat.
                 `,
-                links: [
-                    {
-                        title: "Legal & Badan Hukum",
-                        description: "Dokumen perusahaan, dokumen resmi pendukung termasuk didalamnya Company Profile ...",
-                        url: "#",
-                        icon: "fa fa-institution"
-                    },
-                    {
-                        title: "Galeri & Dokumentasi",
-                        description: "Foto dokumentasi proyek, meeting, kegiatan kantor lainnya ...",
-                        url: "#",
-                        icon: "fa fa-photo"
-                    },
-                    {
-                        title: "Publikasi",
-                        description: "Softcopy handout meeting, hasil publikasi, bahan presentasi, ...",
-                        url: "#",
-                        icon: "fa fa-pencil-square-o"
-                    }
-                ]
             }
         },
         props: {
             founded: {
                 type: Number,
                 required: true
-            }
+            },
+            links: Object
         },
         mounted: function(){
             var year_founded = this.founded;

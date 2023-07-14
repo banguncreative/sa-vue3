@@ -13,3 +13,9 @@
     }
 </script>
 
+<style scoped>
+    p{
+        margin: 0.2rem;
+    }
+</style>
+

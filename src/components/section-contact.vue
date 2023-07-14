@@ -34,7 +34,7 @@ import choppingLib from './chopping.lib';
             >
                 <div class="container" id="footer-info">
                     <div class="row">
-                        <div class="col-lg-4 mb-3">
+                        <div class="col-md-4 mb-3">
                             <footer-info
                                 title="additional info"
                             >
@@ -49,7 +49,7 @@ import choppingLib from './chopping.lib';
                                 </table>
                             </footer-info>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-md-4">
                             <footer-info
                                 title="useful-link"
                             >
@@ -58,12 +58,12 @@ import choppingLib from './chopping.lib';
                                 </div>
                             </footer-info>
                         </div>
-                        <div class="col-lg-4 p-2" id="contact">
+                        <div class="col-md-4 p-2" id="contact">
                             <footer-info
                                 title="contact"
                             >
                                 <div>
-                                    <i class="fa fa-map-marker"></i> <p>{{ profile.address }}</p>
+                                    <i class="fa fa-map-marker"></i> <p v-html="profile.address"></p>
                                 </div> 
                                 <div>
                                     <i class="fa fa-envelope"></i> <p>{{ profile.contacts.email }}</p>
@@ -72,7 +72,7 @@ import choppingLib from './chopping.lib';
                                     <i class="fa fa-whatsapp "></i> <a target="_Blank" :href="wame(profile.contacts.wa, 'Hallo, dengan Surya Cemerlang. saya ingin berkonsultasi')"><p>+{{ chopPhone(profile.contacts.wa+" ", 4) }}</p></a>
                                 </div>
                                 <div>
-                                    <i class="fa fa-phone"></i> <a :href="'tel://'+profile.contacts.tel"><p>+{{ chopPhone(profile.contacts.tel, 3) }}</p></a>
+                                    <i class="fa fa-phone"></i> <a :href="'tel://'+profile.contacts.tel"><p>+{{ chopPhone(profile.contacts.tel+" ", 4) }}</p></a>
                                 </div>
                             </footer-info>
                             <footer-component></footer-component>
