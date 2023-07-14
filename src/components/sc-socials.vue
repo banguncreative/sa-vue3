@@ -1,6 +1,6 @@
 <template>
-    <div class="container social">
-        <span v-if="!socials.length">* * * *</span>
+    <div class="container social" v-if="socials">
+        <span v-if="!socials">* * * *</span>
         <a v-for="social in socials"
             class="m-2"
             :href="social.url"
@@ -14,7 +14,7 @@
     export default{
         props:{
             socials:{
-                type: Array,
+                type: Object,
                 required: true
             }
         }

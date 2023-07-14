@@ -41,12 +41,12 @@
                 var url = a
                 ?   a 
                 :   g > 0
-                ?   '/src/assets/img/sc-profile/profile-no-photo.png' 
-                :   '/src/assets/img/sc-profile/profile-no-photo2.png';
+                ?   '/assets/img/sc-profile/profile-no-photo.png' 
+                :   '/assets/img/sc-profile/profile-no-photo2.png';
 
                 return 'Url('+url+')';
             }
-        }
+        },
     }
 </script>
 

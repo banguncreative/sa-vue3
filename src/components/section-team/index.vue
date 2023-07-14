@@ -1,6 +1,6 @@
 <script setup>
     import scSocials from '../sc-socials.vue';
-    import member from './member.vue';
+    import ScMember from './member.vue';
 </script>
 <template>
     <div class="container-fluid section-header align-items-center text-center" id="team">
@@ -31,11 +31,12 @@
                         v-if="members.length"
                         class="row d-flex justify-content-center members"
                     >
-                        <member
+                        <ScMember
                             v-for="member in members"
+                            :key="member.name"
                             :member="member"
                         >
-                        </member>
+                        </ScMember>
                     </div>
                 </div>
             </div>
@@ -48,7 +49,7 @@
     export default{
         data: function(){
             return {
-                members: []
+                members: [],
             }
         },
         props: {
@@ -60,11 +61,10 @@
 			.then(data => {
                 this.chief = data.find(x => x.jobdesk == 'Chief Operating Officer');
                 var chief_loc = data.indexOf(this.chief);
-                
                 // remove chief from collection
                 data.splice(chief_loc,1);
                 this.members = data
-
+                console.log(this.members)
             });
         }
     }

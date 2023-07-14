@@ -74,7 +74,9 @@ import choppingLib from './chopping.lib';
                                     <i class="fa fa-phone"></i> <a :href="'tel://'+profile.contacts.tel"><p>+{{ chopPhone(profile.contacts.tel+" ", 4) }}</p></a>
                                 </div>
                             </footer-info>
-                            <footer-component></footer-component>
+                            <footer-component
+                                :socials="profile.socials"
+                            ></footer-component>
                         </div>
                     </div>
                 </div>

@@ -1,8 +1,8 @@
 <template>
     <div class="social-links">
         <a
-            v-for="social in Object.keys(links)" 
-            :href="links[social]" 
+            v-for="social in Object.keys(socials)" 
+            :href="socials[social]" 
             :class="social+' m-1'"
         >
             <i :class="icons[social]"></i>
@@ -14,13 +14,6 @@
     export default{
         data: function(){
             return {
-                links:{
-                    twitter: "#",
-                    facebook: "#",
-                    instagram: "#",
-                    google: "#",
-                    linkedin: "#"
-                },
                 icons : {
                     twitter:"fa fa-twitter",
                     facebook: "fa fa-facebook",
@@ -30,5 +23,8 @@
                 }
             }
         },
+        props:{
+            socials:Object
+        }
     }
 </script>
