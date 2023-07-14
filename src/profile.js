@@ -1,6 +1,12 @@
 export default{
     company_name: "SURYA CEMERLANG",
     founded: 2010,
+    indexing_key: "Surya Cemerlang. Konsultan lingkungan Sidoarjo dengan <strong class='y-experienced'></strong> pengalaman, konsultan ukl upl, konsultan amdal, konsultan pertek ipal, konsultan pertek bmal",
+    description:`
+    Kami adalah perusahaan kecil menegah yang bergerak dalam bidang jasa konsultasi lingkungan. Berdiri sejak <strong class="y-founded"></strong>, 
+    setidaknya genap sudah <strong class="y-experienced"></strong> pengalaman kami dalam jasa konsultasi. 
+    Menjalankan fungsi perencanaan dan pemantauan, kami terus belajar dan berinovasi demi terwujutnya visi lingkungan hidup yang sehat.
+    `,
     address:"Perumahan Puri Indah CC 8, Suko, Kec.Sidoarjo Kab.Sidoarjo<br>Jawa Timur Kode-Pos.61224",
     contacts: {
         tel: "6281235588840",
@@ -19,7 +25,7 @@ export default{
         {
             title: "Legal & Badan Hukum",
             description: "Dokumen perusahaan, dokumen resmi pendukung termasuk didalamnya Company Profile ...",
-            url: "#",
+            url: "https://drive.google.com/drive/folders/1svYVQuKZKoZ1OQX-vFdDo2X7HD0o7W_h?usp=sharing",
             icon: "fa fa-institution"
         },
         {
@@ -46,7 +52,7 @@ export default{
         },
         {
             name:"Rose Print Digital Printing",
-            url:"#"
+            url:"https://goo.gl/maps/kGSix4D4N5MSBha49"
         }
     ],
     jambuka:[

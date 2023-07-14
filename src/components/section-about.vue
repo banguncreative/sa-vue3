@@ -4,7 +4,8 @@
             <div class="row about-container">
                 <div class="col-lg-6 content order-lg-1 order-2">
                     <h2 class="title mt-5" >{{title}}</h2>
-                    <p v-html="about"></p>
+                    <p style="display: none;" v-html="indexing"></p>
+                    <p v-html="description"></p>
                     <div 
                         v-for="link in links"
                         :key="link.title"
@@ -30,11 +31,6 @@
         data: function(){
             return {
                 title: "Sedikit Tentang Kami",
-                about: `
-                    Kami adalah perusahaan kecil menegah yang bergerak dalam bidang jasa konsultasi lingkungan. Berdiri sejak <strong class="y-founded"></strong>, 
-                    setidaknya genap sudah <strong class="y-experienced"></strong> pengalaman kami dalam jasa konsultasi. 
-                    Menjalankan fungsi perencanaan dan pemantauan, kami terus belajar dan berinovasi demi terwujutnya visi lingkungan hidup yang sehat.
-                `,
             }
         },
         props: {
@@ -42,7 +38,9 @@
                 type: Number,
                 required: true
             },
-            links: Object
+            links: Object,
+            description: String,
+            indexing: String
         },
         mounted: function(){
             var year_founded = this.founded;

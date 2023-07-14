@@ -26,6 +26,8 @@
     <sectionAbout
       :founded="profile.founded"
       :links="profile.aboutLinks"
+      :indexing="profile.indexing_key"
+      :description="profile.description"
     ></sectionAbout>
 
     <sectionfact

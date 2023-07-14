@@ -66,7 +66,7 @@ import choppingLib from './chopping.lib';
                                     <i class="fa fa-map-marker"></i> <p v-html="profile.address"></p>
                                 </div> 
                                 <div>
-                                    <i class="fa fa-envelope"></i> <p>{{ profile.contacts.email }}</p>
+                                    <i class="fa fa-envelope"></i> <a :href="'mailto:'+profile.contacts.email"><p>{{ profile.contacts.email }}</p></a>
                                 </div> 
                                 <div>
                                     <i class="fa fa-whatsapp "></i> <a target="_Blank" :href="wame(profile.contacts.wa, 'Hallo, dengan Surya Cemerlang. saya ingin berkonsultasi')"><p>+{{ chopPhone(profile.contacts.wa+" ", 4) }}</p></a>
