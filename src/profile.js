@@ -31,7 +31,7 @@ export default{
         {
             title: "Galeri & Dokumentasi",
             description: "Foto dokumentasi proyek, meeting, kegiatan kantor lainnya ...",
-            url: "#",
+            url: "/page.html",
             icon: "fa fa-photo"
         },
         {
