@@ -38,7 +38,7 @@ import choppingLib from './chopping.lib';
     export default{
         data: function(){
             return {
-                title: "Call to Acction",
+                title: "Call to Action",
                 description: "Kantor kami beroperasi 6 hari kerja dan setengah hari di hari Sabtu. CS kami akan dengan senang hati membantu anda, Order, komplain, dan saran dapat melalui kontak berikut:"
             }
         },

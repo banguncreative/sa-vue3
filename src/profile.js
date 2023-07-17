@@ -56,7 +56,7 @@ export default{
         },
         {
             name:"RSS/ATOM",
-            url:"https://suryacemerlang-sc.blogspot.com/feeds/posts/default/"
+            url:"https://blog.surya-cemerlang.co.id/feeds/posts/default/"
         },
     ],
     jambuka:[
