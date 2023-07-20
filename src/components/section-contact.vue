@@ -11,7 +11,7 @@ import choppingLib from './chopping.lib';
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">Contact</h3>
-                <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                <p class="section-description">Temukan kami melalui map, atau hubungi kami melalui kontak berikut</p>
             </div>
         </div>
         <!-- Uncomment below if you wan to use dynamic maps -->

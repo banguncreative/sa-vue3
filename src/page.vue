@@ -11,7 +11,7 @@
         :links="links"
         :profile="profile"
     >
-        <div class="bg-light" style="min-height: 100px;"></div>
+        <div style="min-height: 80px; background-color: var(--accent-color_3);" ></div>
         <div class="container-fluid p-4 bg-light" >
             <div class="row">
                 <div class="col-lg-8 bg-white m-auto mb-2 p-4 shadow-sm rounded-lg" style="min-height: 600px;">
